@@ -1,0 +1,40 @@
+import java.text.SimpleDateFormat
+
+plugins {
+    id 'java'
+    id 'com.gradleup.shadow' version '8.3+'
+}
+
+group = 'cn.qfys521'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18+'
+    annotationProcessor 'org.projectlombok:lombok:1.18+'
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.17+"
+    implementation fileTree(dir: 'libs', includes: ['*.jar'])
+
+    testCompileOnly 'org.projectlombok:lombok:1.18+'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18+'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+shadowJar {
+    manifest {
+        attributes.put("Project", gradle.getRootProject().getName())
+        attributes.put("Implementation-Version", archiveVersion)
+        attributes.put("Main-Class", "cn.qfys521.Main")
+        attributes.put("JavaVersion", JavaVersion.VERSION_11.toString())
+        attributes.put("Build-Date", new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date()))
+        attributes.put("Build-Script", "Gradle")
+        attributes.put("Build-Script-Version", gradle.gradleVersion)
+    }
+}
