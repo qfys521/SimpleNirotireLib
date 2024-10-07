@@ -1,4 +1,4 @@
-package cn.qfys521.file;
+package cn.qfys521.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;

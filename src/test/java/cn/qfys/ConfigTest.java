@@ -1,9 +1,9 @@
 package cn.qfys;
 
-import cn.qfys521.file.JsonConfig;
-import cn.qfys521.file.PropertiesConfig;
-import cn.qfys521.file.XmlConfig;
-import cn.qfys521.file.YamlConfig;
+import cn.qfys521.config.JsonConfig;
+import cn.qfys521.config.PropertiesConfig;
+import cn.qfys521.config.XmlConfig;
+import cn.qfys521.config.YamlConfig;
 import java.io.IOException;
 import org.junit.jupiter.api.Test;
 
