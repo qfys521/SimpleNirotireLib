@@ -54,17 +54,16 @@ class MyConfig {
 
 
 class Example {
-    public static void main(String[] args) {
-        Config<MyConfig> config = new Config<>(new MyConfig(), "config.json", MyConfig.class);
-        MyConfig loadedConfig = config.loadOrFail();
+    @Test
+    public void testXmlConfig() throws IOException {
+        XmlConfig<MyConfig> myConfigConfig = new XmlConfig<>(new MyConfig(), "config.xml");
+        MyConfig myConfig = myConfigConfig.loadOrFail();
 
-        loadedConfig.setName("Name");
+        myConfig.setName("testBean");
 
-        loadedConfig.saveOrFail();
+        myConfigConfig.saveOrFail();
 
-        // 使用 Time 类
-        String currentTime = Time.getNowTimeStr("yyyy-MM-dd HH:mm:ss");
-        System.out.println(currentTime);
+        System.out.println(myConfigConfig.toXml());
     }
 }
 ```
