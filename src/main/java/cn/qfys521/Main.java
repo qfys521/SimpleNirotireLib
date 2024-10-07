@@ -3,8 +3,8 @@ package cn.qfys521;
 import org.apache.commons.cli.*;
 
 /**
- * This is the main entry point for the application.
- * It parses command-line arguments using Apache Commons CLI and provides help and version information.
+ * This is the main entry point for the application. It parses command-line arguments using Apache Commons CLI and
+ * provides help and version information.
  */
 public class Main {
 

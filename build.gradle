@@ -1,6 +1,8 @@
 import java.text.SimpleDateFormat
 
 plugins {
+    id 'java-library'
+    id 'maven-publish'
     id 'java'
     id 'com.gradleup.shadow' version '8.3+'
 }
@@ -15,8 +17,14 @@ repositories {
 dependencies {
     compileOnly 'org.projectlombok:lombok:1.18+'
     annotationProcessor 'org.projectlombok:lombok:1.18+'
-    implementation "com.fasterxml.jackson.core:jackson-databind:2.17+"
-    implementation fileTree(dir: 'libs', includes: ['*.jar'])
+
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.17+"//jackson and json
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.2"//jackson and yaml
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-properties:2.13.4"//jackson and java properties
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.4"//jackson and xml
+
+    implementation 'commons-cli:commons-cli:1.9.0'// Apache Commons CLI
+
 
     testCompileOnly 'org.projectlombok:lombok:1.18+'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18+'

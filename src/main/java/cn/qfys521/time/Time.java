@@ -29,8 +29,9 @@ public class Time {
     /**
      * Gets the current date and time as a formatted string using a specified format pattern.
      *
-     * @param format The format pattern string used for formatting the date and time.
-     *               See {@link java.text.SimpleDateFormat} for details on format patterns.
+     * @param format The format pattern string used for formatting the date and time. See
+     *               {@link java.text.SimpleDateFormat} for details on format patterns.
+     *
      * @return The current date and time as a formatted string.
      */
     public static String getNowTimeStr(String format) {
@@ -50,6 +51,7 @@ public class Time {
      * Converts a system time in milliseconds to a {@link java.util.Date} object.
      *
      * @param time The system time in milliseconds since epoch.
+     *
      * @return The Date object representing the provided system time.
      */
     public static Date getSystemTimeToDate(long time) {
@@ -57,12 +59,12 @@ public class Time {
     }
 
     /**
-     * Gets the current system time as a formatted string using a specified format pattern.
-     * This method combines {@link #getSystemTime()} and {@link #getSystemTimeToDate(long)}
-     * internally before formatting.
+     * Gets the current system time as a formatted string using a specified format pattern. This method combines
+     * {@link #getSystemTime()} and {@link #getSystemTimeToDate(long)} internally before formatting.
      *
-     * @param format The format pattern string used for formatting the date and time.
-     *               See {@link java.text.SimpleDateFormat} for details on format patterns.
+     * @param format The format pattern string used for formatting the date and time. See
+     *               {@link java.text.SimpleDateFormat} for details on format patterns.
+     *
      * @return The current system time as a formatted string.
      */
     public static String getSystemTimeStr(String format) {

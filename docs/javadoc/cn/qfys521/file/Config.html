@@ -72,26 +72,31 @@ loadScripts(document, 'script');</script>
                 <h1 class="title" title="类 Config">类 Config&lt;T&gt;</h1>
             </div>
             <div class="inheritance" title="继承树"><a
-                    class="external-link"
                     href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html"
-                    title="java.lang中的类或接口">java.lang.Object</a>
+                    class="external-link" title="java.lang中的类或接口">java.lang.Object</a>
                 <div class="inheritance">cn.qfys521.file.Config&lt;T&gt;</div>
             </div>
             <section class="class-description" id="class-description">
                 <dl class="notes">
                     <dt>类型参数:</dt>
-                    <dd><code>T</code> - The type of data stored in the configuration file.</dd>
+                    <dd><code>T</code> - The type of data this configuration holds.</dd>
+                </dl>
+                <dl class="notes">
+                    <dt>直接已知子类:</dt>
+                    <dd><code><a href="JsonConfig.html" title="cn.qfys521.file中的类">JsonConfig</a></code>, <code><a
+                            href="PropertiesConfig.html" title="cn.qfys521.file中的类">PropertiesConfig</a></code>,
+                        <code><a href="XmlConfig.html" title="cn.qfys521.file中的类">XmlConfig</a></code>, <code><a
+                                href="YamlConfig.html" title="cn.qfys521.file中的类">YamlConfig</a></code></dd>
                 </dl>
                 <hr>
-                <div class="type-signature"><span class="modifiers">public class </span><span
+                <div class="type-signature"><span class="modifiers">public abstract class </span><span
                         class="element-name type-name-label">Config&lt;T&gt;</span>
                     <span class="extends-implements">extends <a
-                            class="external-link"
                             href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html"
-                            title="java.lang中的类或接口">Object</a></span></div>
-                <div class="block">This class provides a configuration utility for managing generic data loaded from and
-                    saved to files.
-                    It utilizes Jackson for serialization and deserialization.
+                            class="external-link" title="java.lang中的类或接口">Object</a></span></div>
+                <div class="block">An abstract base class representing a configuration for data storage and retrieval.
+                    Subclasses of this class provide concrete implementations for saving and loading data
+                    to/from specific file formats (e.g., JSON, XML, YAML).
                 </div>
             </section>
             <section class="summary">
@@ -104,40 +109,10 @@ loadScripts(document, 'script');</script>
                             <div class="summary-table two-column-summary">
                                 <div class="table-header col-first">构造器</div>
                                 <div class="table-header col-last">说明</div>
-                                <div class="col-constructor-name even-row-color"><code><a
-                                        class="member-name-link" href="#%3Cinit%3E(T,java.io.File,java.lang.Class)">Config</a>
-                                    <wbr>
-                                    (<a href="Config.html" title="Config中的类型参数">T</a>&nbsp;t,
-                                    <a class="external-link"
-                                       href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/File.html"
-                                       title="java.io中的类或接口">File</a>&nbsp;file,
-                                    <a class="external-link"
-                                       href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html"
-                                       title="java.lang中的类或接口">Class</a>&lt;<a
-                                            href="Config.html" title="Config中的类型参数">T</a>&gt;&nbsp;clazz)</code>
+                                <div class="col-constructor-name even-row-color"><code><a class="member-name-link"
+                                                                                          href="#%3Cinit%3E()">Config</a>()</code>
                                 </div>
-                                <div class="col-last even-row-color">
-                                    <div class="block">Creates a new Config instance with the provided file and data
-                                        class.
-                                    </div>
-                                </div>
-                                <div class="col-constructor-name odd-row-color"><code><a
-                                        class="member-name-link" href="#%3Cinit%3E(T,java.lang.String,java.lang.Class)">Config</a>
-                                    <wbr>
-                                    (<a href="Config.html" title="Config中的类型参数">T</a>&nbsp;t,
-                                    <a class="external-link"
-                                       href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html"
-                                       title="java.lang中的类或接口">String</a>&nbsp;fileName,
-                                    <a class="external-link"
-                                       href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html"
-                                       title="java.lang中的类或接口">Class</a>&lt;<a
-                                            href="Config.html" title="Config中的类型参数">T</a>&gt;&nbsp;clazz)</code>
-                                </div>
-                                <div class="col-last odd-row-color">
-                                    <div class="block">Creates a new Config instance with the provided file name and
-                                        data class.
-                                    </div>
-                                </div>
+                                <div class="col-last even-row-color">&nbsp;</div>
                             </div>
                         </section>
                     </li>
@@ -147,29 +122,23 @@ loadScripts(document, 'script');</script>
                             <h2>方法概要</h2>
                             <div id="method-summary-table">
                                 <div aria-orientation="horizontal" class="table-tabs" role="tablist">
-                                    <button aria-controls="method-summary-table.tabpanel" aria-selected="true"
-                                            class="active-table-tab"
-                                            id="method-summary-table-tab0"
-                                            onclick="show('method-summary-table', 'method-summary-table', 3)"
-                                            onkeydown="switchTab(event)"
+                                    <button aria-controls="method-summary-table.tabpanel" aria-selected="true" class="active-table-tab"
+                                            id="method-summary-table-tab0" onkeydown="switchTab(event)"
                                             role="tab"
+                                            onclick="show('method-summary-table', 'method-summary-table', 3)"
                                             tabindex="0">所有方法
                                     </button>
-                                    <button aria-controls="method-summary-table.tabpanel" aria-selected="false"
-                                            class="table-tab"
-                                            id="method-summary-table-tab2"
-                                            onclick="show('method-summary-table', 'method-summary-table-tab2', 3)"
+                                    <button aria-controls="method-summary-table.tabpanel" aria-selected="false" class="table-tab"
+                                            id="method-summary-table-tab2" role="tab"
                                             onkeydown="switchTab(event)"
-                                            role="tab"
+                                            onclick="show('method-summary-table', 'method-summary-table-tab2', 3)"
                                             tabindex="-1">实例方法
                                     </button>
-                                    <button aria-controls="method-summary-table.tabpanel" aria-selected="false"
-                                            class="table-tab"
-                                            id="method-summary-table-tab4"
-                                            onclick="show('method-summary-table', 'method-summary-table-tab4', 3)"
+                                    <button aria-controls="method-summary-table.tabpanel" aria-selected="false" class="table-tab"
+                                            id="method-summary-table-tab3" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)"
                                             onkeydown="switchTab(event)"
                                             role="tab"
-                                            tabindex="-1">具体方法
+                                            tabindex="-1">抽象方法
                                     </button>
                                 </div>
                                 <div id="method-summary-table.tabpanel" role="tabpanel">
@@ -178,36 +147,25 @@ loadScripts(document, 'script');</script>
                                         <div class="table-header col-first">修饰符和类型</div>
                                         <div class="table-header col-second">方法</div>
                                         <div class="table-header col-last">说明</div>
-                                        <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-                                            <code><a href="Config.html" title="Config中的类型参数">T</a></code></div>
-                                        <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+                                        <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+                                            <code>abstract <a href="Config.html" title="Config中的类型参数">T</a></code>
+                                        </div>
+                                        <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
                                             <code><a class="member-name-link"
                                                      href="#loadOrFail()">loadOrFail</a>()</code></div>
-                                        <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-                                            <div class="block">Loads the configuration data from the configured file,
-                                                throwing an exception on failure.
+                                        <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+                                            <div class="block">Loads data from a file in a format specific to the
+                                                implementing subclass and casts it to the type `T`.
                                             </div>
                                         </div>
-                                        <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-                                            <code>void</code></div>
-                                        <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+                                        <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+                                            <code>abstract void</code></div>
+                                        <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
                                             <code><a class="member-name-link"
                                                      href="#saveOrFail()">saveOrFail</a>()</code></div>
-                                        <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-                                            <div class="block">Saves the current configuration data to the specified
-                                                file, throwing an exception on failure.
-                                            </div>
-                                        </div>
-                                        <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-                                            <code><a
-                                                    class="external-link"
-                                                    href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html"
-                                                    title="java.lang中的类或接口">String</a></code></div>
-                                        <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-                                            <code><a class="member-name-link" href="#toJson()">toJson</a>()</code></div>
-                                        <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-                                            <div class="block">Converts the current configuration data to a JSON
-                                                string.
+                                        <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+                                            <div class="block">Saves the data object to a file in a format specific to
+                                                the implementing subclass.
                                             </div>
                                         </div>
                                     </div>
@@ -215,43 +173,31 @@ loadScripts(document, 'script');</script>
                             </div>
                             <div class="inherited-list">
                                 <h3 id="methods-inherited-from-class-java.lang.Object">从类继承的方法&nbsp;java.lang.<a
-                                        class="external-link"
                                         href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html"
-                                        title="java.lang中的类或接口">Object</a></h3>
+                                        class="external-link" title="java.lang中的类或接口">Object</a></h3>
                                 <code><a
-                                        class="external-link"
                                         href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()"
-                                        title="java.lang中的类或接口">clone</a>, <a
-                                        class="external-link"
+                                        class="external-link" title="java.lang中的类或接口">clone</a>, <a
                                         href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)"
-                                        title="java.lang中的类或接口">equals</a>, <a
-                                        class="external-link"
+                                        class="external-link" title="java.lang中的类或接口">equals</a>, <a
                                         href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()"
-                                        title="java.lang中的类或接口">finalize</a>, <a
-                                        class="external-link"
+                                        class="external-link" title="java.lang中的类或接口">finalize</a>, <a
                                         href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()"
-                                        title="java.lang中的类或接口">getClass</a>, <a
-                                        class="external-link"
+                                        class="external-link" title="java.lang中的类或接口">getClass</a>, <a
                                         href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()"
-                                        title="java.lang中的类或接口">hashCode</a>, <a
-                                        class="external-link"
+                                        class="external-link" title="java.lang中的类或接口">hashCode</a>, <a
                                         href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()"
-                                        title="java.lang中的类或接口">notify</a>, <a
-                                        class="external-link"
+                                        class="external-link" title="java.lang中的类或接口">notify</a>, <a
                                         href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()"
-                                        title="java.lang中的类或接口">notifyAll</a>, <a
-                                        class="external-link"
+                                        class="external-link" title="java.lang中的类或接口">notifyAll</a>, <a
                                         href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()"
-                                        title="java.lang中的类或接口">toString</a>, <a
-                                        class="external-link"
+                                        class="external-link" title="java.lang中的类或接口">toString</a>, <a
                                         href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()"
-                                        title="java.lang中的类或接口">wait</a>, <a
-                                        class="external-link"
+                                        class="external-link" title="java.lang中的类或接口">wait</a>, <a
                                         href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)"
-                                        title="java.lang中的类或接口">wait</a>, <a
-                                        class="external-link"
+                                        class="external-link" title="java.lang中的类或接口">wait</a>, <a
                                         href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)"
-                                        title="java.lang中的类或接口">wait</a></code></div>
+                                        class="external-link" title="java.lang中的类或接口">wait</a></code></div>
                         </section>
                     </li>
                 </ul>
@@ -264,64 +210,11 @@ loadScripts(document, 'script');</script>
                             <h2>构造器详细资料</h2>
                             <ul class="member-list">
                                 <li>
-                                    <section class="detail" id="&lt;init&gt;(T,java.lang.String,java.lang.Class)">
-                                        <h3 id="&lt;init&gt;(java.lang.Object,java.lang.String,java.lang.Class)">
-                                            Config</h3>
+                                    <section class="detail" id="&lt;init&gt;()">
+                                        <h3>Config</h3>
                                         <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span
-                                                class="element-name">Config</span>
-                                            <wbr>
-                                            <span class="parameters">(<a href="Config.html"
-                                                                         title="Config中的类型参数">T</a>&nbsp;t,
- <a class="external-link"
-    href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html"
-    title="java.lang中的类或接口">String</a>&nbsp;fileName,
- <a class="external-link"
-    href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html"
-    title="java.lang中的类或接口">Class</a>&lt;<a href="Config.html"
-                                                  title="Config中的类型参数">T</a>&gt;&nbsp;clazz)</span>
+                                                class="element-name">Config</span>()
                                         </div>
-                                        <div class="block">Creates a new Config instance with the provided file name and
-                                            data class.
-                                        </div>
-                                        <dl class="notes">
-                                            <dt>参数:</dt>
-                                            <dd><code>t</code> - The initial data object to store in the configuration.
-                                            </dd>
-                                            <dd><code>fileName</code> - The name of the configuration file.</dd>
-                                            <dd><code>clazz</code> - The class representing the type of data to be
-                                                stored.
-                                            </dd>
-                                        </dl>
-                                    </section>
-                                </li>
-                                <li>
-                                    <section class="detail" id="&lt;init&gt;(T,java.io.File,java.lang.Class)">
-                                        <h3 id="&lt;init&gt;(java.lang.Object,java.io.File,java.lang.Class)">Config</h3>
-                                        <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span
-                                                class="element-name">Config</span>
-                                            <wbr>
-                                            <span class="parameters">(<a href="Config.html"
-                                                                         title="Config中的类型参数">T</a>&nbsp;t,
- <a class="external-link" href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/File.html"
-    title="java.io中的类或接口">File</a>&nbsp;file,
- <a class="external-link"
-    href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html"
-    title="java.lang中的类或接口">Class</a>&lt;<a href="Config.html"
-                                                  title="Config中的类型参数">T</a>&gt;&nbsp;clazz)</span>
-                                        </div>
-                                        <div class="block">Creates a new Config instance with the provided file and data
-                                            class.
-                                        </div>
-                                        <dl class="notes">
-                                            <dt>参数:</dt>
-                                            <dd><code>t</code> - The initial data object to store in the configuration.
-                                            </dd>
-                                            <dd><code>file</code> - The File object representing the configuration file.
-                                            </dd>
-                                            <dd><code>clazz</code> - The class representing the type of data to be
-                                                stored.
-                                            </dd>
-                                        </dl>
                                     </section>
                                 </li>
                             </ul>
@@ -335,48 +228,32 @@ loadScripts(document, 'script');</script>
                                 <li>
                                     <section class="detail" id="saveOrFail()">
                                         <h3>saveOrFail</h3>
-                                        <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span
+                                        <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span
                                                 class="return-type">void</span>&nbsp;<span class="element-name">saveOrFail</span>()
                                         </div>
-                                        <div class="block">Saves the current configuration data to the specified file,
-                                            throwing an exception on failure.
+                                        <div class="block">Saves the data object to a file in a format specific to the
+                                            implementing subclass.
+                                            Throws an IOException if any errors occur during file operations.
                                         </div>
                                     </section>
                                 </li>
                                 <li>
                                     <section class="detail" id="loadOrFail()">
                                         <h3>loadOrFail</h3>
-                                        <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span
+                                        <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span
                                                 class="return-type"><a href="Config.html"
                                                                        title="Config中的类型参数">T</a></span>&nbsp;<span
                                                 class="element-name">loadOrFail</span>()
                                         </div>
-                                        <div class="block">Loads the configuration data from the configured file,
-                                            throwing an exception on failure.
-                                            If the file doesn't exist, it will be created with default data (provided
-                                            `t` field).
+                                        <div class="block">Loads data from a file in a format specific to the
+                                            implementing subclass and casts it to the type `T`.
+                                            Throws an IOException if any errors occur during file operations.
                                         </div>
                                         <dl class="notes">
                                             <dt>返回:</dt>
-                                            <dd>The loaded configuration data as an instance of type T.</dd>
-                                        </dl>
-                                    </section>
-                                </li>
-                                <li>
-                                    <section class="detail" id="toJson()">
-                                        <h3>toJson</h3>
-                                        <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span
-                                                class="return-type"><a
-                                                class="external-link"
-                                                href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html"
-                                                title="java.lang中的类或接口">String</a></span>&nbsp;<span
-                                                class="element-name">toJson</span>()
-                                        </div>
-                                        <div class="block">Converts the current configuration data to a JSON string.
-                                        </div>
-                                        <dl class="notes">
-                                            <dt>返回:</dt>
-                                            <dd>The JSON representation of the configuration data.</dd>
+                                            <dd>The data object loaded from the configuration file, cast to the type
+                                                `T`.
+                                            </dd>
                                         </dl>
                                     </section>
                                 </li>
