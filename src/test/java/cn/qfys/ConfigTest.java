@@ -4,6 +4,7 @@ import cn.qfys521.config.JsonConfig;
 import cn.qfys521.config.PropertiesConfig;
 import cn.qfys521.config.XmlConfig;
 import cn.qfys521.config.YamlConfig;
+import cn.qfys521.util.RandomUtil;
 import java.io.IOException;
 import org.junit.jupiter.api.Test;
 
@@ -61,4 +62,10 @@ public class ConfigTest {
         System.out.println(testBeanConfig.toXml());
     }
 
+    @Test
+    public void testRandom() {
+        System.out.println(RandomUtil.randomInt(100));
+        System.out.println(RandomUtil.randomLong(Integer.MAX_VALUE + 1L));
+        System.out.println(RandomUtil.randomInt(Integer.MAX_VALUE));
+    }
 }
