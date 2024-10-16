@@ -74,7 +74,8 @@ loadScripts(document, 'script');</script>
             <div class="inheritance" title="继承树"><a
                     class="external-link"
                     href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="java.lang中的类或接口">java.lang.Object</a>
-                <div class="inheritance"><a href="Config.html" title="cn.qfys521.file中的类">cn.qfys521.config.Config</a>&lt;T&gt;
+                <div class="inheritance"><a href="Config.html"
+                                            title="cn.qfys521.config中的类">cn.qfys521.config.Config</a>&lt;T&gt;
                     <div class="inheritance">cn.qfys521.config.JsonConfig&lt;T&gt;</div>
                 </div>
             </div>
@@ -86,12 +87,11 @@ loadScripts(document, 'script');</script>
                 <hr>
                 <div class="type-signature"><span class="modifiers">public class </span><span
                         class="element-name type-name-label">JsonConfig&lt;T&gt;</span>
-                    <span class="extends-implements">extends <a href="Config.html"
-                                                                title="cn.qfys521.file中的类">Config</a>&lt;T&gt;</span>
+                    <span class="extends-implements">extends <a href="Config.html" title="cn.qfys521.config中的类">Config</a>&lt;T&gt;</span>
                 </div>
                 <div class="block">A configuration class specifically for handling JSON serialization and
-                    deserialization of data.
-                    Extends the generic `Config
+                    deserialization of data. Extends the generic
+                    `Config
                     <T>` class and provides methods for saving and loading data to/from a JSON file.
                 </div>
             </section>
@@ -244,9 +244,9 @@ loadScripts(document, 'script');</script>
  <a class="external-link"
     href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口">String</a>&nbsp;fileName)</span></div>
                                         <div class="block">Creates a new JsonConfig instance with the provided data
-                                            object and file name.
-                                            Enables <code>SerializationFeature.INDENT_OUTPUT</code> for human-readable
-                                            JSON output.
+                                            object and file name. Enables
+                                            <code>SerializationFeature.INDENT_OUTPUT</code> for human-readable JSON
+                                            output.
                                         </div>
                                         <dl class="notes">
                                             <dt>参数:</dt>
@@ -272,13 +272,13 @@ loadScripts(document, 'script');</script>
                                                 class="return-type">void</span>&nbsp;<span class="element-name">saveOrFail</span>()
                                         </div>
                                         <div class="block">Saves the data object `t` to the configured file path in JSON
-                                            format.
-                                            Throws an IOException if any errors occur during file operations.
+                                            format. Throws an IOException if any errors occur
+                                            during file operations.
                                         </div>
                                         <dl class="notes">
                                             <dt>指定者:</dt>
                                             <dd><code><a href="Config.html#saveOrFail()">saveOrFail</a></code>&nbsp;在类中&nbsp;<code><a
-                                                    href="Config.html" title="cn.qfys521.file中的类">Config</a>&lt;<a
+                                                    href="Config.html" title="cn.qfys521.config中的类">Config</a>&lt;<a
                                                     href="JsonConfig.html"
                                                     title="JsonConfig中的类型参数">T</a>&gt;</code></dd>
                                         </dl>
@@ -293,14 +293,14 @@ loadScripts(document, 'script');</script>
                                                 class="element-name">loadOrFail</span>()
                                         </div>
                                         <div class="block">Loads the data object from the configured file path and casts
-                                            it to the type `T`.
-                                            Creates a new file if it doesn't exist before loading.
-                                            Throws an IOException if any errors occur during file operations.
+                                            it to the type `T`. Creates a new file if it
+                                            doesn't exist before loading. Throws an IOException if any errors occur
+                                            during file operations.
                                         </div>
                                         <dl class="notes">
                                             <dt>指定者:</dt>
                                             <dd><code><a href="Config.html#loadOrFail()">loadOrFail</a></code>&nbsp;在类中&nbsp;<code><a
-                                                    href="Config.html" title="cn.qfys521.file中的类">Config</a>&lt;<a
+                                                    href="Config.html" title="cn.qfys521.config中的类">Config</a>&lt;<a
                                                     href="JsonConfig.html"
                                                     title="JsonConfig中的类型参数">T</a>&gt;</code></dd>
                                             <dt>返回:</dt>
@@ -315,9 +315,9 @@ loadScripts(document, 'script');</script>
                                                 class="return-type">void</span>&nbsp;<span class="element-name">createNewFile</span>()
                                         </div>
                                         <div class="block">Creates a new file at the configured file path if it doesn't
-                                            already exist.
-                                            If the file is created successfully, writes the data object `t` to it.
-                                            Throws an IOException if any errors occur during file operations.
+                                            already exist. If the file is created successfully,
+                                            writes the data object `t` to it. Throws an IOException if any errors occur
+                                            during file operations.
                                         </div>
                                     </section>
                                 </li>
@@ -330,8 +330,8 @@ loadScripts(document, 'script');</script>
                                                 href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口">String</a></span>&nbsp;<span
                                                 class="element-name">toJson</span>()
                                         </div>
-                                        <div class="block">Converts the data object `t` to a JSON string.
-                                            Throws an IOException if any errors occur during serialization.
+                                        <div class="block">Converts the data object `t` to a JSON string. Throws an
+                                            IOException if any errors occur during serialization.
                                         </div>
                                         <dl class="notes">
                                             <dt>返回:</dt>
