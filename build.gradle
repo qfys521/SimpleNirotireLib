@@ -8,7 +8,7 @@ plugins {
 }
 
 group = 'cn.qfys521'
-version = '1.0-SNAPSHOT'
+version = '1.1.0'
 
 repositories {
     mavenCentral()
@@ -44,5 +44,31 @@ shadowJar {
         attributes.put("Build-Date", new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date()))
         attributes.put("Build-Script", "Gradle")
         attributes.put("Build-Script-Version", gradle.gradleVersion)
+    }
+}
+
+// 打包sourcesJar任务
+tasks.register('sourcesJar', Jar) {
+    from sourceSets.main.allSource
+}
+
+// 打包javadocJar任务
+tasks.register('javadocJar', Jar) {
+
+    from javadoc.destinationDir
+}
+
+
+publishing {
+    // 发布
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+    // 发布仓库
+    repositories {
+        mavenLocal()
+
     }
 }
