@@ -1,7 +1,7 @@
 package cn.qfys521.util;
 
 import cn.qfys521.string.SuppressWarningsStrings;
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Utility class for generating random numbers.
@@ -18,7 +18,7 @@ public class RandomUtil {
      * @return A random integer.
      */
     public static int randomInt() {
-        return new Random().nextInt();
+        return ThreadLocalRandom.current().nextInt();
     }
 
     /**
@@ -29,7 +29,7 @@ public class RandomUtil {
      * @return A random integer within the specified bound.
      */
     public static int randomInt(int bound) {
-        return new Random().nextInt(bound);
+        return ThreadLocalRandom.current().nextInt(bound);
     }
 
     /**
@@ -38,7 +38,7 @@ public class RandomUtil {
      * @return A random double between 0.0 and 1.0.
      */
     public static double randomDouble() {
-        return new Random().nextDouble();
+        return ThreadLocalRandom.current().nextDouble();
     }
 
     /**
@@ -49,7 +49,7 @@ public class RandomUtil {
      * @return A random double within the specified bound.
      */
     public static double randomDouble(double bound) {
-        return new Random().nextDouble(bound);
+        return ThreadLocalRandom.current().nextDouble(bound);
     }
 
     /**
@@ -58,7 +58,7 @@ public class RandomUtil {
      * @return A random float between 0.0f and 1.0f.
      */
     public static float randomFloat() {
-        return new Random().nextFloat();
+        return ThreadLocalRandom.current().nextFloat();
     }
 
     /**
@@ -69,7 +69,7 @@ public class RandomUtil {
      * @return A random float within the specified bound.
      */
     public static float randomFloat(float bound) {
-        return new Random().nextFloat(bound);
+        return ThreadLocalRandom.current().nextFloat(bound);
     }
 
     /**
@@ -78,7 +78,7 @@ public class RandomUtil {
      * @return A random long.
      */
     public static long randomLong() {
-        return new Random().nextLong();
+        return ThreadLocalRandom.current().nextLong();
     }
 
     /**
@@ -89,7 +89,7 @@ public class RandomUtil {
      * @return A random long within the specified bound.
      */
     public static long randomLong(long bound) {
-        return new Random().nextLong(bound);
+        return ThreadLocalRandom.current().nextLong(bound);
     }
 
     /**
@@ -98,6 +98,6 @@ public class RandomUtil {
      * @return A random boolean (true or false).
      */
     public static boolean randomBoolean() {
-        return new Random().nextBoolean();
+        return ThreadLocalRandom.current().nextBoolean();
     }
 }
