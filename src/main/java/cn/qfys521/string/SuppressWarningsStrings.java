@@ -7,6 +7,7 @@ package cn.qfys521.string;
  * @author [Your Name]
  * @version 1.0
  */
+@SuppressWarnings(SuppressWarningsStrings.UNUSED)
 public class SuppressWarningsStrings {
     /**
      * Suppresses all warnings.
