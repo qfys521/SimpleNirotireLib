@@ -65,7 +65,7 @@ public class ConfigTest {
     @Test
     public void testRandom() {
         System.out.println(RandomUtil.randomInt(100));
-        System.out.println(RandomUtil.randomLong(Integer.MAX_VALUE + 1L));
+        System.out.println(RandomUtil.randomLong(Long.MAX_VALUE));
         System.out.println(RandomUtil.randomInt(Integer.MAX_VALUE));
     }
 }
