@@ -1,5 +1,6 @@
 package cn.qfys521.util;
 
+import cn.qfys521.string.SuppressWarningsStrings;
 import java.util.Random;
 
 /**
@@ -8,6 +9,7 @@ import java.util.Random;
  * <p>This class provides methods to generate random integers, doubles, floats, longs, and booleans within specified
  * ranges.</p>
  */
+@SuppressWarnings(SuppressWarningsStrings.UNUSED)
 public class RandomUtil {
 
     /**

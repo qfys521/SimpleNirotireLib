@@ -1,5 +1,6 @@
 package cn.qfys521.config;
 
+import cn.qfys521.string.SuppressWarningsStrings;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import java.io.File;
@@ -15,6 +16,7 @@ import lombok.SneakyThrows;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
+@SuppressWarnings(SuppressWarningsStrings.UNUSED)
 public class JsonConfig<T> extends Config<T> {
 
     /**
@@ -61,7 +63,7 @@ public class JsonConfig<T> extends Config<T> {
      * @return The data object loaded from the JSON file, cast to the type `T`.
      */
     @SneakyThrows
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings(SuppressWarningsStrings.UNCHECKED)
     public T loadOrFail() {
         createNewFile();
         return (T) (t = this.mapper.readValue(file, t.getClass()));
@@ -75,6 +77,7 @@ public class JsonConfig<T> extends Config<T> {
     public void createNewFile() {
         if (!file.exists()) {
             var a = file.createNewFile();
+
             mapper.writeValue(file, t);
         }
     }

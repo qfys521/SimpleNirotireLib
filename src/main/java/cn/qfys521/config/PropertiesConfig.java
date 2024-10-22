@@ -1,5 +1,6 @@
 package cn.qfys521.config;
 
+import cn.qfys521.string.SuppressWarningsStrings;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.javaprop.JavaPropsMapper;
@@ -14,6 +15,7 @@ import lombok.SneakyThrows;
  *
  * @param <T> The type of data this configuration holds.
  */
+@SuppressWarnings(SuppressWarningsStrings.UNUSED)
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class PropertiesConfig<T> extends Config<T> {
@@ -38,7 +40,7 @@ public class PropertiesConfig<T> extends Config<T> {
      * {@link SerializationFeature#INDENT_OUTPUT} for human-readable properties output.
      *
      * @param t        The data object to be serialized or deserialized.
-     * @param fileName The name of the file to store or load the properties data.
+     * @param fileName The name of the file to store or load the properties` data.
      */
     public PropertiesConfig(T t, String fileName) {
         mapper.enable(SerializationFeature.INDENT_OUTPUT);

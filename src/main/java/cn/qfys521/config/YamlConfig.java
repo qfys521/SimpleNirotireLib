@@ -1,5 +1,6 @@
 package cn.qfys521.config;
 
+import cn.qfys521.string.SuppressWarningsStrings;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLGenerator;
 import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
@@ -15,6 +16,7 @@ import lombok.SneakyThrows;
  * @param <T> The type of data this configuration holds.
  */
 @EqualsAndHashCode(callSuper = true)
+@SuppressWarnings(SuppressWarningsStrings.UNUSED)
 @Data
 public class YamlConfig<T> extends Config<T> {
 

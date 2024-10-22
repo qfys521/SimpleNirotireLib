@@ -1,5 +1,6 @@
 package cn.qfys521.config;
 
+import cn.qfys521.string.SuppressWarningsStrings;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
@@ -16,6 +17,7 @@ import lombok.SneakyThrows;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
+@SuppressWarnings(SuppressWarningsStrings.UNUSED)
 public class XmlConfig<T> extends Config<T> {
 
     /**

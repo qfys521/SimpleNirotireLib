@@ -1,11 +1,13 @@
 package cn.qfys521.time;
 
+import cn.qfys521.string.SuppressWarningsStrings;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
  * This class provides utility methods for working with time.
  */
+@SuppressWarnings(SuppressWarningsStrings.UNUSED)
 public class Time {
 
     /**
