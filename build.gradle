@@ -46,24 +46,23 @@ shadowJar {
         attributes.put("Build-Script-Version", gradle.gradleVersion)
     }
 }
-
-// 打包sourcesJar任务
-tasks.register('sourcesJar', Jar) {
-    from sourceSets.main.allSource
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+    withJavadocJar()
+    withSourcesJar()
 }
-
-// 打包javadocJar任务
-tasks.register('javadocJar', Jar) {
-
-    from javadoc.destinationDir
-}
-
-
 publishing {
-    // 发布
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                groupId = group
+                artifactId = 'SimpleNirotireLib'
+                version = version
+
+                from components.java
+            }
         }
     }
     // 发布仓库

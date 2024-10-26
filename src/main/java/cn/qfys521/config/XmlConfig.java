@@ -64,7 +64,7 @@ public class XmlConfig<T> extends Config<T> {
      * @return The data object loaded from the XML file, cast to the type `T`.
      */
     @SneakyThrows
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings(SuppressWarningsStrings.UNCHECKED)
     public T loadOrFail() {
         createNewFile();
         return (T) (t = this.mapper.readValue(file, t.getClass()));
