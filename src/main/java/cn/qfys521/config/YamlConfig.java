@@ -11,7 +11,7 @@ import lombok.SneakyThrows;
 
 /**
  * A configuration class specifically for handling YAML serialization and deserialization of data. Extends the generic
- * `Config<T>` class and provides methods for saving and loading data to/from a YAML file.
+ * `Config` class and provides methods for saving and loading data to/from a YAML file.
  *
  * @param <T> The type of data this configuration holds.
  */

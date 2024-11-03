@@ -11,7 +11,7 @@ import lombok.SneakyThrows;
 
 /**
  * A configuration class specifically for handling properties file serialization and deserialization of data. Extends
- * the generic `Config<T>` class and provides methods for saving and loading data to/from a properties file.
+ * the generic `Config` class and provides methods for saving and loading data to/from a properties file.
  *
  * @param <T> The type of data this configuration holds.
  */

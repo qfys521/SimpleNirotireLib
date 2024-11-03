@@ -11,7 +11,7 @@ import lombok.SneakyThrows;
 
 /**
  * A configuration class specifically for handling XML serialization and deserialization of data. Extends the generic
- * `Config<T>` class and provides methods for saving and loading data to/from an XML file.
+ * `Config` class and provides methods for saving and loading data to/from an XML file.
  *
  * @param <T> The type of data this configuration holds.
  */
